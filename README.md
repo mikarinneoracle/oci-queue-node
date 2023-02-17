@@ -72,3 +72,11 @@ npm install
 node index.js
 </pre>
 
+### Sending messages to Queue while it is polling
+
+You can send messages to the queue and see them being received while polling using the OCI Queue Console  
+<code>Actions/Send Message</code>.
+
+<p>
+You can also play with the queue's <code>Dead Letter Queue</code> settings to see how many
+times the same message is being received (default is 5).
