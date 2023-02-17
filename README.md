@@ -33,6 +33,7 @@ Setup secrets to run this example with GitHub Actions:
     <li><b>OCI_USER</b>: OCI User OCID</li>
     <li><b>OCI_FINGERPRINT</b>: OCI User Fingerprint</li>
     <li><b>OCI_KEY</b>: OCI User Private Key</li>
+    <li><b>OCI_PASSPHRASE</b>: OCI User Private Key passphrase (optional)</li>
     <li><b>Q_ID</b>: OCI Queue OCID</li>
     <li><b>Q_ENDPOINT</b>OCI Queue Endpoint</li>
 </ul>
