@@ -48,7 +48,7 @@ Monitor the GitHub action to run:
 <p>
 This example will poll for messages in the queue and finally writes a new message to it.
 
-### View Messages on the Queue
+### View messages in the Queue
 
 <img src="messages.png" width="800" />
 
