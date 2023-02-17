@@ -17,13 +17,15 @@ const provider = new common.SimpleAuthenticationDetailsProvider(
   region
 );
 
+// Q settings
+const queueId = process.env.Q_ID;
+const endpoint = process.env.Q_ENDPOINT;
+
+
 (async () => {
     var res = "";
     try {
         
-        const queueId = 'ocid1.queue.oc1.eu-frankfurt-1.amaaaaaauevftmqa4cesw3xy5zoyfox5r455vdwghv3yfxycla5z4ic2tslq';
-        const endpoint = 'https://cell-1.queue.messaging.eu-frankfurt-1.oci.oraclecloud.com';
-
         const getReq = {
           queueId: queueId
         };

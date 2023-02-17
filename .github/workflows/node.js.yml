@@ -23,6 +23,9 @@ jobs:
       OCI_TENANCY: ${{ secrets.OCI_TENANCY }}
       OCI_FINGERPRINT: ${{ secrets.OCI_FINGERPRINT }}
       OCI_KEY: ${{ secrets.OCI_KEY }}
+      #OCI_PASSPHRASE: ${{ secrets.OCI_PASSPHRASE }} #Optional
+      Q_ID: ${{ secrets.Q_ID }}
+      Q_ENDPOINT: ${{ secrets.Q_ENDPOINT }}
 
     steps:
     - uses: actions/checkout@v3
@@ -34,4 +37,6 @@ jobs:
     - run: |
         npm install
         node index.js
+        
+    
     
