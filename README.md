@@ -1,6 +1,8 @@
 ## OCI Queue example in NodeJS with GitHub Actions
 
-### Setup secrets to run this example with GitHub Actions:
+### Secrets
+
+Setup secrets to run this example with GitHub Actions:
 
 <ul>
     <li><b>OCI_TENANCY</b>: OCI Tenancy OCID</li>
@@ -11,8 +13,11 @@
     <li><b>Q_ENDPOINT</b>OCI Queue Endpoint</li>
 </ul>
 
-#### Create Queue and copy the Queue OCID and Enpoint:
+### OCI Queue
 
+Create Queue and copy the Queue OCID and Enpoint:
+
+<p>
 <img src="endpoint.png" width="800" />
 
 <p>
@@ -24,19 +29,24 @@ When using another <code>region</code> than <code>EU_FRANKFURT_1</code> please m
 const region = common.Region.EU_FRANKFURT_1;
 </pre>
 
-#### Setup policies for your user in the tenancy
+### Policies
+
+Setup policies for your user in the tenancy
 
 e.g. <code>Allow &lt;USER_GROUP&gt; to manage queues in compartment &lt;COMPARTMENT&gt;</code>
 
 More on OCI Queue IAM policies: https://docs.oracle.com/en-us/iaas/Content/queue/policy-reference.htm
 
-### Monitor the GitHub action to run:
+### Run Action
 
+Monitor the GitHub action to run:
+
+<p>
 <img src="action.png" width="800" />
 
 <p>
 This example will poll for messages in the queue and finally writes a new message to it.
 
-### Messages on the Queue:
+### View Messages on the Queue
 
 <img src="messages.png" width="800" />
