@@ -50,3 +50,21 @@ This example will poll for messages in the queue and finally writes a new messag
 ### View Messages on the Queue
 
 <img src="messages.png" width="800" />
+
+### Running locally
+
+Clone this repo, setup npm and <code>oci cli</code> and modify https://github.com/mikarinneoracle/oci-queue-node/blob/main/index.js#L8 by uncommenting it and removing/commenting lines 10-18 and replace lines 21-22
+with Queue details :
+
+<pre>
+// Use this locally instead of env vars and region:
+const provider = new common.ConfigFileAuthenticationDetailsProvider();
+
+// Q settings
+const queueId = 'ocid1.queue.oc1.eu-frankfurt-1.ama....a5z4ic2tslq';
+const endpoint = 'https://cell-1.queue.messaging.eu-frankfurt-1.oci.oraclecloud.com';
+</pre>
+
+
+
+
