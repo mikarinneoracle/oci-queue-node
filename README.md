@@ -53,7 +53,7 @@ This example will poll for messages in the queue and finally writes a new messag
 
 ### Running locally
 
-Clone this repo, setup npm and <code>oci cli</code> and modify https://github.com/mikarinneoracle/oci-queue-node/blob/main/index.js#L8 by uncommenting it and removing/commenting lines 10-18 and replace lines 21-22
+Clone this repo, setup npm and <code>oci cli</code> and modify <a href="https://github.com/mikarinneoracle/oci-queue-node/blob/main/index.js#L8">index.js</a> line 8 by uncommenting it and removing/commenting lines 10-18 and replace lines 21-22
 with Queue details :
 
 <pre>
