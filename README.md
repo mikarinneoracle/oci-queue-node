@@ -1,18 +1,5 @@
 ## OCI Queue example in NodeJS with GitHub Actions
 
-### Secrets
-
-Setup secrets to run this example with GitHub Actions:
-
-<ul>
-    <li><b>OCI_TENANCY</b>: OCI Tenancy OCID</li>
-    <li><b>OCI_USER</b>: OCI User OCID</li>
-    <li><b>OCI_FINGERPRINT</b>: OCI User Fingerprint</li>
-    <li><b>OCI_KEY</b>: OCI User Private Key</li>
-    <li><b>Q_ID</b>: OCI Queue OCID</li>
-    <li><b>Q_ENDPOINT</b>OCI Queue Endpoint</li>
-</ul>
-
 ### OCI Queue
 
 Create Queue and copy the Queue OCID and Enpoint:
@@ -36,6 +23,19 @@ Setup policies for your user in the tenancy
 e.g. <code>Allow &lt;USER_GROUP&gt; to manage queues in compartment &lt;COMPARTMENT&gt;</code>
 
 More on OCI Queue IAM policies: https://docs.oracle.com/en-us/iaas/Content/queue/policy-reference.htm
+
+### Secrets
+
+Setup secrets to run this example with GitHub Actions:
+
+<ul>
+    <li><b>OCI_TENANCY</b>: OCI Tenancy OCID</li>
+    <li><b>OCI_USER</b>: OCI User OCID</li>
+    <li><b>OCI_FINGERPRINT</b>: OCI User Fingerprint</li>
+    <li><b>OCI_KEY</b>: OCI User Private Key</li>
+    <li><b>Q_ID</b>: OCI Queue OCID</li>
+    <li><b>Q_ENDPOINT</b>OCI Queue Endpoint</li>
+</ul>
 
 ### Run Action
 
