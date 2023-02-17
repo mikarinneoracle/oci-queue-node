@@ -65,6 +65,10 @@ const queueId = 'ocid1.queue.oc1.eu-frankfurt-1.ama....a5z4ic2tslq';
 const endpoint = 'https://cell-1.queue.messaging.eu-frankfurt-1.oci.oraclecloud.com';
 </pre>
 
+Then run:
 
-
+<pre>
+npm install
+node index.js
+</pre>
 
