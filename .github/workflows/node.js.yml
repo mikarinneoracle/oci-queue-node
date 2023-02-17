@@ -18,6 +18,11 @@ jobs:
       matrix:
         node-version: [ 16.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    env:
+      OCI_USER: ${{ secrets.OCI_USER }}
+      OCI_TENANCY: ${{ secrets.OCI_TENANCY }}
+      OCI_FINGERPRINT: ${{ secrets.OCI_FINGERPRINT }}
+      OCI_KEY: ${{ secrets.OCI_KEY }}
 
     steps:
     - uses: actions/checkout@v3
