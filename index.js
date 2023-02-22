@@ -35,22 +35,18 @@ const endpoint = process.env.Q_ENDPOINT;
         });
         
         client.endpoint = endpoint;
-
-        var timeout = false;
         console.log("Polling .. ");
         var getRes = await client.getMessages(getReq).catch(error => {
-            console.log("timeout");
-            timeout = true;
+            console.log(error);
         });
-        while(!timeout && getRes && getRes.getMessages && getRes.getMessages.messages.length)
+        while(getRes && getRes.getMessages && getRes.getMessages.messages.length)
         {
             getRes.getMessages.messages.forEach(function(msg) {
                 console.log(msg);
             });
             console.log("Polling .. ");
             getRes = await client.getMessages(getReq).catch(error => {
-                console.log("timeout");
-                timeout = true;
+                console.log(error);
             });
         }
 
