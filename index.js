@@ -21,13 +21,13 @@ const provider = new common.SimpleAuthenticationDetailsProvider(
 const queueId = process.env.Q_ID;
 const endpoint = process.env.Q_ENDPOINT;
 
-
 (async () => {
     var res = "";
     try {
         
         const getReq = {
-          queueId: queueId
+          queueId: queueId,
+          timeoutInSeconds: 2
         };
 
         const client = new queue.QueueClient({
@@ -36,15 +36,22 @@ const endpoint = process.env.Q_ENDPOINT;
         
         client.endpoint = endpoint;
 
+        var timeout = false;
         console.log("Polling .. ");
-        var getRes = await client.getMessages(getReq);
-        while(getRes && getRes.getMessages && getRes.getMessages.messages.length)
+        var getRes = await client.getMessages(getReq).catch(error => {
+            console.log("timeout");
+            timeout = true;
+        });
+        while(!timeout && getRes && getRes.getMessages && getRes.getMessages.messages.length)
         {
             getRes.getMessages.messages.forEach(function(msg) {
                 console.log(msg);
             });
             console.log("Polling .. ");
-            getRes = await client.getMessages(getReq);
+            getRes = await client.getMessages(getReq).catch(error => {
+                console.log("timeout");
+                timeout = true;
+            });
         }
 
         const d = new Date();
