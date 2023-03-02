@@ -35,6 +35,13 @@ const endpoint = process.env.Q_ENDPOINT;
         });
         
         client.endpoint = endpoint;
+        
+        console.log("Getting Queue stats .. ");
+        var statsRes = await client.getStats(statsReq).catch(error => {
+            console.log(error);
+        });
+        console.log(statsRes);
+        
         console.log("Polling .. ");
         var getRes = await client.getMessages(getReq).catch(error => {
             console.log(error);
