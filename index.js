@@ -25,6 +25,10 @@ const endpoint = process.env.Q_ENDPOINT;
     var res = "";
     try {
         
+        const statsReq = {
+          queueId: queueId
+        };
+
         const getReq = {
           queueId: queueId,
           timeoutInSeconds: 2
