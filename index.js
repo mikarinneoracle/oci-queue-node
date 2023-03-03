@@ -54,12 +54,12 @@ const endpoint = process.env.Q_ENDPOINT;
         {
             getRes.getMessages.messages.forEach(function(msg) {
                 console.log(msg);
+                var delReq = {
+                  queueId: queueId,
+                  messageReceipt: msg.receipt
+                };
+                client.deleteMessage(delReq);
             });
-            var delReq = {
-              queueId: queueId,
-              messageReceipt: msg.receipt
-            };
-            client.deleteMessage(delReq);
             console.log("Polling .. ");
             getRes = await client.getMessages(getReq).catch(error => {
                 console.log(error);
