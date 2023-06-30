@@ -7,7 +7,6 @@ const os = require("oci-objectstorage");
 // Use this locally instead of env vars and region:
 //const provider = new common.ConfigFileAuthenticationDetailsProvider();
 
-// testing
 const region = common.Region.EU_FRANKFURT_1;
 const provider = new common.SimpleAuthenticationDetailsProvider(
   process.env.OCI_TENANCY,
