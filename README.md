@@ -78,6 +78,7 @@ node index.js
 You can manually send messages to the queue using the OCI Queue Console  
 <code>Actions/Send Message</code> and then see them being received by re-running the build.
 
+
 <p>
 You can also play with the queue's <code>Dead Letter Queue</code> settings to see how many
 times the same message is being received (default is 5). To do this comment the 
