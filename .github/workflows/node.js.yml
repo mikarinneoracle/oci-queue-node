@@ -28,6 +28,14 @@ jobs:
       Q_ENDPOINT: ${{ secrets.Q_ENDPOINT }}
 
     steps:
+    - name: List functions
+      uses: oracle-actions/run-oci-cli-command@v1.2.0
+      id: list-functions
+      with:
+        command: 'oci os ns get'
+    - name: Echo output
+      run: |
+        echo '${{ steps.list-functions.outputs.raw_output }}'
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
